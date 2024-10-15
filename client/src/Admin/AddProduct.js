@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';  
 import axios from 'axios';  
 
+
 const ProductManagement = () => {  
+    const URL='http://localhost:3000/'
     const [products, setProducts] = useState([]);  
     const [product, setProduct] = useState({ product_id: '', title: '', price: '', description: '', content: '', images: [], category: '' });  
     const [editing, setEditing] = useState(false);  
     const [error, setError] = useState('');  
 
-    const apiUrl = 'http://localhost:3000/api/products';   
+    const apiUrl = `${URL}api/products`;   
 
     const getToken = () => {  
         return localStorage.getItem('accesstoken');  

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'; // Use useNavigate fo
 import axios from 'axios';
 
 const DeatilProducts = () => {
+  const URL='http://localhost:3000/'
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ const DeatilProducts = () => {
 
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/products/${id}`);
+        const response = await axios.get(`${URL}api/products/${id}`);
         setProduct(response.data.data);
         setLoading(false);
       } catch (error) {

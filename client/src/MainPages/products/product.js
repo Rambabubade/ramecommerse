@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const ProductList = () => {
+  const URL='http://localhost:3000/'
   const navigate = useNavigate();
   
   // State to store the list of products, loading, and error states
@@ -21,7 +22,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/products');
+        const response = await axios.get(`${URL}api/products`);
         const productsData = response.data.data;
         setProducts(productsData);
         setLoading(false);

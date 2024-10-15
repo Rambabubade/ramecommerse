@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const URL='http://localhost:3000/'
   const [user, setUser] = useState({
     email: '',
     password: ''
@@ -18,7 +19,7 @@ const Login = () => {
   const loginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/user/login', user);
+      const response = await axios.post(`${URL}user/login`, user);
       console.log(response.data);
 
       // Store tokens and role in local storage

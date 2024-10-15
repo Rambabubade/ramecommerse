@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Register = () => {
+  const URL='http://localhost:3000/'
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -18,7 +19,7 @@ const Register = () => {
 
   const registerSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:3000/user/register', user)
+    axios.post(`${URL}user/register`, user)
       .then(res => {
         console.log(res.data);
         localStorage.setItem('accesstoken', res.data.accesstoken);

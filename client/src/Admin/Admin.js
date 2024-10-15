@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Admin = () => {
+  const URL='http://localhost:3000/'
   const [user, setUser] = useState({
     email: '',
     password: ''
@@ -16,7 +17,7 @@ const Admin = () => {
   const loginSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/user/login', user);
+      const response = await axios.post(`${URL}user/login`, user);
       console.log(response.data);
       localStorage.setItem('accesstoken', response.data.accesstoken);
       localStorage.setItem('refreshtoken', response.data.refreshtoken);
