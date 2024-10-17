@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const Register = () => {
-  const URL='http://localhost:3000/'
+  const URL='https://server-phi-blue.vercel.app/'
   const [user, setUser] = useState({
     name: '',
     email: '',
