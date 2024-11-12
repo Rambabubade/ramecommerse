@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const ProductList = () => {
-  const URL='https://server-phi-blue.vercel.app/'
+  const URL='https://ramecommerse.onrender.com'
   const navigate = useNavigate();
   
   // State to store the list of products, loading, and error states

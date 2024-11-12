@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'; // Use useNavigate fo
 import axios from 'axios';
 
 const DeatilProducts = () => {
-  const URL='https://server-phi-blue.vercel.app/'
+  const URL='https://ramecommerse.onrender.com'
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);

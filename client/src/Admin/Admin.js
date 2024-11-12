@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Admin = () => {
-  const URL='http://localhost:3000/'
+  const URL='https://ramecommerse.onrender.com'
   const [user, setUser] = useState({
     email: '',
     password: ''
